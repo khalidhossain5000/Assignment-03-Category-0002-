@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -18,32 +18,56 @@
 
     <!-- font awesome CDN  -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <!-- font in custom css  -->
-    <style>
-        .sora- {
-            font-family: "Sora", serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
 
-        .poppins- {
-            font-family: "Poppins", serif;
-            font-weight: 400;
-            font-style: normal;
+<!-- custom theme setup  -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            title:'#111111',
+            myaccent:'#179800',
+            'primary-bg':'#EFEBE3',
+          },
+         fontFamily:{
+          'sora':['"Sora", serif'],
+          'poppins':['"Poppins", serif']
+         } 
         }
-        /* colors  */
-        .primary-bg{
-            background-color: #EFEBE3;
-        }
-        .title-color{
-            color:#111111;
-        }
-    </style>
+      }
+    }
+  </script>
+  
 </head>
-
-<body>
-
+<body class="sora">
+    <header class="bg-gradient-to-b from-white to-[#EFEBE3]">
+        <!-- top menu start  -->
+         <nav class="md:container mx-auto flex items-center justify-between py-5 md:px-0 px-4 border-b-2 border-black md:border-b-0 mb-24">
+            <!-- logo  -->
+             <img class="block" src="./c2-assets/logo-header.png" alt="">
+             <!-- mobile logo  -->
+             
+             <!-- center nav menu  -->
+              <div class="hidden md:block">
+                <ul class="flex items-center justify-center gap-6 text-title text-xl">
+                    <li><a href="">Product</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+              </div>
+              <!-- icon and button  -->
+               <div class="space-x-4 hidden md:block">
+                <span><i class="fa-solid fa-magnifying-glass text-xl"></i></span>
+                <span><i class="fa-solid fa-cart-shopping text-xl"></i></span>
+                <!-- button  -->
+                 <button class="border border-[#179800] py-[10px] px-[30px] rounded-lg text-xl">Login</button>
+                 <button class="border-none bg-[#179800] py-[10px] px-[30px] rounded-lg text-white text-xl ml-3">Register</button>
+                </div>
+                <!-- mobile burger icon  -->
+                 <span class="md:hidden"><i class="fa-solid fa-bars text-5xl"></i></span>
+         </nav>
+         <!-- banner section start  -->
+    </header>
 </body>
 
 </html>
